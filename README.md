@@ -3,7 +3,7 @@ Simple proxy implemented with Spring Cloud gateway
 
 This system is composed by 2 microservices and 1 proxy:
 
-### Microservices:
+## Microservices:
 ### Buying:
 This is a mock microservice with the responsibility of allowing the user to buy a vehicle,
 in this case we have a controller named CarController which is a mock controller that returns
@@ -18,7 +18,7 @@ a that says "You are looking for all available trucks to sell".
 
 this microservice is uploading on the port 8082
 
-### Proxy
+## Proxy
 This is a Proxy that redirects the request to the correct port, this proxy is listening on the port 8080,
 if you make a request to http://localhost:8080/buying/car it will redirect the request to 
 http://localhost:8081/buying/car, if you make a request to http://localhost:8080/selling/truck it will redirect
