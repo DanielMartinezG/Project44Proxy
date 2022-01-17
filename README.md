@@ -26,7 +26,7 @@ the request to http://localhost:8082/selling/truck.
 
 This proxy works as follows:
 
-The proxy module is implemented a Spring Cloud gateway to redirect all the request that came through port 8080
+The proxy module is implementing a Spring Cloud gateway to redirect all the request that came through port 8080
 this is implemented on SpringCloudConfig class which is a configuration class, every request made to /selling is redirected
 to port 8081 and every request made to /bulling is redirected to port 8081.
 
