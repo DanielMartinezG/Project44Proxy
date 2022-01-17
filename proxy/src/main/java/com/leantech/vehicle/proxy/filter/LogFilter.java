@@ -14,11 +14,16 @@ import reactor.core.publisher.Mono;
 public class LogFilter implements GlobalFilter {
   Log log = LogFactory.getLog(LogFilter.class);
 
+  /**
+   * Filter that log the header of each request that the user made through the proxy
+   * @param exchange
+   * @param chain
+   * @return
+   */
   @Override
   public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-    URI routeUri = exchange.getAttribute(ServerWebExchangeUtils.GATEWAY_REQUEST_URL_ATTR);
     log.info("HTTP Method: " + exchange.getRequest().getMethodValue());
-    log.info("Incoming request " + exchange.getRequest().getPath() + " is routed to:" + routeUri);
+    log.info("Incoming request " + exchange.getRequest().getPath() + " is routed to:" + exchange.getAttribute(ServerWebExchangeUtils.GATEWAY_REQUEST_URL_ATTR));
     log.info("Headers: " + exchange.getRequest().getHeaders());
     return chain.filter(exchange);
   }
