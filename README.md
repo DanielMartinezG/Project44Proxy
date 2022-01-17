@@ -9,14 +9,14 @@ This is a mock microservice with the responsibility of allowing the user to buy 
 in this case we have a controller named CarController which is a mock controller that returns
 a text that says "You are looking for all available cars to buy".
 
-this microservice is uploading on the port 8081
+this microservice is listening on the port 8081
 
 ### Selling
 This is a mock microservice with the responsibility of let the user sell a vehicle,
 in this case we have a controller named TruckController which is a mock controller that returns
 a that says "You are looking for all available trucks to sell".
 
-this microservice is uploading on the port 8082
+this microservice is listening on the port 8082
 
 ## Proxy
 This is a Proxy that redirects the request to the correct port, this proxy is listening on the port 8080,
