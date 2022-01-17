@@ -1,0 +1,17 @@
+version: '2'
+services:
+  vehicle-buying:
+    container_name: vehicle-buying
+    build: ../buying/
+    ports:
+      - 8081:8081
+  vehicle-selling:
+    container_name: vehicle-selling
+    build: ../selling/
+    ports:
+      - 8082:8082
+  vehicle-proxy:
+    container_name: vehicle-proxy
+    build: ../proxy/
+    ports:
+      - 8080:8080
